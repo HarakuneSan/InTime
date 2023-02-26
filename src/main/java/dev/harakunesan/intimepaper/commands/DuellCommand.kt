@@ -32,10 +32,10 @@ class DuellCommand : CommandExecutor, TabCompleter, Listener {
     fun onDamage(event: EntityDamageByEntityEvent) {
         val entity = event.entity
         val damager = event.damager
-        if (entity is Player && playersInDuel.find { it[entity] != null } == null) if (damager is Player && playersInCooldown.contains(
-                damager
-            )
-        ) {
+        if (entity is Player && playersInDuel.find { it.keys.contains(entity) || it.values.contains(entity) } == null) {
+            event.isCancelled = true
+        }
+        if(entity is Player && playersInDuel.find { it.keys.contains(damager) || it.values.contains(damager) } == null) {
             event.isCancelled = true
         }
         if (entity is Player && playersInCooldown.contains(entity)) {
@@ -54,7 +54,8 @@ class DuellCommand : CommandExecutor, TabCompleter, Listener {
         val duell = playersInDuel.find { it.keys.contains(event.player) || it.values.contains(event.player) }
         if (duell != null) {
             val (player1, player2) = duell.entries.first { it.key == event.player || it.value == event.player }
-            val timeToTransfer = player1.persistentDataContainer.getOrDefault(timeToTransferKey, timeToTransferKeyType, 69)
+            val timeToTransfer =
+                player1.persistentDataContainer.getOrDefault(timeToTransferKey, timeToTransferKeyType, 69)
             val p1timeleft = player1.persistentDataContainer.getOrDefault(timekey, timekeytype, 69)
             val p2timeleft = player2.persistentDataContainer.getOrDefault(timekey, timekeytype, 69)
             if (event.player == player1) {
