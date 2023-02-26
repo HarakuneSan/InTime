@@ -5,6 +5,7 @@ import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.format.NamedTextColor
 import org.bukkit.NamespacedKey
 import org.bukkit.Sound
+import org.bukkit.enchantments.Enchantment
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.block.BlockBreakEvent
@@ -17,6 +18,7 @@ class BlockBreakReward : Listener {
     @EventHandler
     fun onBlockBreak(event: BlockBreakEvent) {
         if(!timerewards.containsKey(event.block.type.name)) return
+        if(event.player.inventory.itemInMainHand.enchantments.containsKey(Enchantment.SILK_TOUCH)) return
 
         val blockname = event.block.type.name
         val player = event.player
