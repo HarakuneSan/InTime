@@ -1,0 +1,42 @@
+defaultTimeSecs: 7200
+warnTimes:
+  warn: 3600
+  critical: 600
+deathPunish:
+  punishOnNaturalDeath: 600
+  punishOnPlayerDeath: 0
+  transferTimeToKiller: false
+minTimeAfterTransfer: 600
+shop:
+  items:
+    - { NETHER_STAR: 21600 }
+    - { OBSIDIAN: 30 }
+    - { NETHERITE_INGOT: 600 }
+    - { DIAMOND_HORSE_ARMOR: 900 }
+    - { GOLDEN_HORSE_ARMOR: 900 }
+    - { IRON_HORSE_ARMOR: 900 }
+    - { EXPERIENCE_BOTTLE: 600 }
+    - { ENCHANTED_GOLDEN_APPLE: 7200 }
+    - { POISONOUS_POTATO: 5 }
+    - { CONDUIT: 3600 }
+    - { SCULK_SHRIEKER: 120 }
+rewards:
+  blocks:
+    - { COAL_ORE: 10 }
+    - { COPPER_ORE: 10 }
+    - { IRON_ORE: 20 }
+    - { GOLD_ORE: 30 }
+    - { DIAMOND_ORE: 120 }
+    - { REDSTONE_ORE: 40 }
+    - { LAPIS_ORE: 45 }
+    - { EMERALD_ORE: 1200 }
+    - { NETHER_QUARTZ_ORE: 6 }
+    - { DEEPSLATE_COAL_ORE: 10 }
+    - { DEEPSLATE_COPPER_ORE: 10 }
+    - { DEEPSLATE_IRON_ORE: 20 }
+    - { DEEPSLATE_GOLD_ORE: 30 }
+    - { DEEPSLATE_DIAMOND_ORE: 120 }
+    - { DEEPSLATE_REDSTONE_ORE: 40 }
+    - { DEEPSLATE_LAPIS_ORE: 45 }
+    - { DEEPSLATE_EMERALD_ORE: 1200 }
+    - { NETHER_GOLD_ORE: 7 }

@@ -1,0 +1,5 @@
+BLOCK BREAK REWARD
+    Silk touch nicht belohnen
+
+Transfer Command
+    annehmen / ablehnen Implementieren

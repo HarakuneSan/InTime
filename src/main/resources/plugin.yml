@@ -1,0 +1,17 @@
+name: InTimePaper
+version: '${version}'
+main: dev.harakunesan.intimepaper.InTimePlugin
+api-version: 1.19
+authors: [ HarakuneSan, TheLeCrafter ]
+description: Plugin um den Film "In Time" in Minecraft nachzubilden
+website: harakunesan.dev
+commands:
+  resettime:
+    permission: intime.command.resettime
+  settime:
+    permission: intime.command.settime
+  gettime:
+  transfertime:
+  storetime:
+  sell:
+  duell:
